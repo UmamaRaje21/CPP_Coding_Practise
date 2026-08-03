@@ -1,0 +1,14 @@
+// This CPP showcases the use of 2D Array
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int marks[2][3] = {
+                      {20, 30, 40},
+                      {10, 15, 18}
+                    };
+  cout << marks[0][1] << endl;
+}
