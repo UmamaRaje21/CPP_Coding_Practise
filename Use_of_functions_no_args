@@ -1,0 +1,15 @@
+//This CPP showcases the use of functions
+
+#include <iostream>
+
+using namespace std;
+
+void display(){
+  cout << "We are showcasing functions here" << endl;
+}
+
+int main()
+{
+  display();
+  return 0;
+}
