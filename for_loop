@@ -1,0 +1,14 @@
+// This CPP program shows the use of For loop
+// Printing Multiple lines using For Loop
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int counter = 10;
+  for (int i = 1; i <= counter; i++){
+    cout << i << " --> You Rock" << endl;
+  }
+}
