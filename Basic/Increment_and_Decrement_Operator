@@ -1,0 +1,22 @@
+// This file shows the implementation of Increment and Decrement operator
+// It consist of Postfix and Prefix
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int a = 10;
+  cout << "Applying Prefix Increment Operation on " << a << " provides the result as " << ++a << endl; // Prefix Increment operation
+  cout << "Applying Postfix Increment Operation on " << a << " provides the result as " << a++ << endl; // Postfix Increment Operation 
+  cout << "Value of " << a << " in the next line of operation after Postfix Increment operation" << endl;
+
+  cout << endl;
+
+  int b = 15;
+  cout << "Applying Prefix Decrement Operation on " << b << " provides the result as " << --b << endl; // Prefix Decrement operation
+  cout << "Applying Postfix Decrement Operation on " << b << " provides the result as " << b-- << endl; // Postfix Decrement Operation
+  cout << "Value of " << b << " in the next line of operation after Postfix Decrement operation" << endl; 
+
+  return 0;
+}
