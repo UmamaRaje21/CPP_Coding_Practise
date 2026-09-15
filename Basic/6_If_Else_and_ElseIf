@@ -1,0 +1,20 @@
+// This file shows the implementation of Conditonal Station
+// It consist of IfElse and ElseIf
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int percentage = 70;
+    if (percentage < 35){
+      cout << "You have failed" << endl;
+    }else if(percentage < 60){
+      cout << "You have got Second Class" << endl;
+    }else if(percentage < 85){
+      cout << "You have got First Class" << endl;
+    }else{
+      cout << "You have got Distinction" << endl;
+    }
+    return 0;    
+}
