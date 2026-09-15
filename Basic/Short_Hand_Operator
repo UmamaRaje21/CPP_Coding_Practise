@@ -1,0 +1,30 @@
+// This file shows the implementation of Short Hand Operator
+// It consist of Addition, Substraction, Multiplication, Division and Modulus
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int a = 10, b = 20;
+  cout << "The value of a is " << a << " and b is " << b << endl;
+  a += b;
+  cout << "Using Short Hand addition operation provides the result as " << a << endl << endl;
+
+  cout << "The value of a is " << a << " and b is " << b << endl;
+  a -= b;
+  cout << "Using Short Hand substraction operation provides the result as " << a << endl << endl;
+
+  cout << "The value of a is " << a << " and b is " << b << endl;
+  a *= b;
+  cout << "Using Short Hand multiplication operation provides the result as " << a << endl << endl;
+
+  cout << "The value of a is " << a << " and b is " << b << endl;
+  a /= b;
+  cout << "Using Short Hand Division operation provides the result as " << a << endl << endl;
+
+  cout << "The value of a is " << a << " and b is " << b << endl;
+  a %= b;
+  cout << "Using Short Hand Modulus operation provides the result as " << a << endl << endl;
+  return 0;
+}
