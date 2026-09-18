@@ -1,0 +1,27 @@
+/******************************************************************************
+
+This program showcases the use of Comparision and Logical Operators in C++
+Following are the Comparision Operators : <, >, <=, >=, ==, !=
+Following are the Logical Operators: &&, || and !
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int date = 20;
+    if (date >= 1 && date <=31){
+        cout << "Its a valid date" << endl;
+        if(date == 9 || date == 20){
+            cout << "Its a special day" << endl;
+        }else{
+            cout << "Its not a special day" << endl;
+        }
+    }else{
+        cout << "Its a invalid date" << endl;
+    }
+    
+    return 0;
+}
