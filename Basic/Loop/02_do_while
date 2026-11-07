@@ -1,0 +1,14 @@
+/* This programs shows the usage of do while loop*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int counter = 0;
+  do{
+    cout << "Inside the while loop with counter value as " << counter << endl; 
+    counter++;
+  }while(counter <= 10);
+  return 0;
+}
