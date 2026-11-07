@@ -1,0 +1,16 @@
+/* This program shows the use of while loop 
+It prints until the counter reaches a value of zero */
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+  int counter = 10;
+  while(counter != 0){
+    cout << counter << " Printing until it reaches 0" << endl; 
+    counter--;
+  }
+  return 0;
+}
