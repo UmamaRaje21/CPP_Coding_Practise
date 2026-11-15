@@ -1,0 +1,35 @@
+/*
+ Find duplicate elements in an array C++
+*/
+
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+
+using namespace std;
+
+    vector<int> find_duplicates(const vector<int>& f_arr){
+        unordered_set<int> seen;
+        unordered_set<int> duplicate;
+        
+        for (int a: f_arr){
+            if(!seen.insert(a).second){
+                duplicate.insert(a);
+            }
+        }
+        
+        return vector<int>(duplicate.begin(), duplicate.end());         
+    }
+
+int main(){
+    
+    vector<int> arr = {2,5,4,1,5,9,8,3,1,2};
+    
+    vector<int> duplicate_arr = find_duplicates(arr);
+
+    for (int a: duplicate_arr){
+        cout << a << endl;
+    }
+    
+    return 0;
+}
