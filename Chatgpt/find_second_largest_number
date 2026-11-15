@@ -1,0 +1,23 @@
+/*
+Find the second largest number
+*/
+
+#include <iostream>
+#include <vector>
+#include <set>
+
+using namespace std;
+
+int main(){
+    
+    vector<int> arr = {2,5,4,1,5,9,8,3,1,2};
+    set<int> set_arr(arr.begin(), arr.end());
+    
+    if(set_arr.size() > 2){
+        int second_last_element = *++set_arr.rbegin();
+        cout << second_last_element << endl;
+    }else{
+        cout << "Only 1 element is present" << endl;
+    }
+    return 0;
+}
