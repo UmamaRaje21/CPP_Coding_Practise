@@ -1,0 +1,25 @@
+/******************************************************************************
+Reverse a string without the build-in function
+*******************************************************************************/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    
+    string name = "Reversing String";
+    int name_len = name.length();
+    string r_name = "";
+    int count = name_len-1;
+    
+    for (int counter = 0; counter < name_len; counter++){
+        r_name += name[count];
+        count--;
+    }
+    
+    cout << "Name " << name << " Length " << name_len << endl;
+    cout << "Reverse Name " << r_name << " Length " << r_name.length() << endl;
+    return 0;
+}
