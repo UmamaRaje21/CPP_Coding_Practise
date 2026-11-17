@@ -16,6 +16,9 @@ class Box{
         Box(const Box& b){
             length = new int(*b.length);
         }
+        ~Box(){
+            delete length;
+        }
 };
 
 int main(){
