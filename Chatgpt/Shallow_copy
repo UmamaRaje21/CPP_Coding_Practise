@@ -12,6 +12,9 @@ class Box{
         Box(int l){
             length = new int(l);
         }
+        ~Box(){
+            delete length;
+        }
 };
 
 int main(){
