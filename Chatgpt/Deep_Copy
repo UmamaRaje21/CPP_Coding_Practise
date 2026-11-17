@@ -1,0 +1,33 @@
+/******************************************************************************
+Deep Copy
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+class Box{
+    public:
+        int* length;
+        
+        Box(int l){
+            length = new int(l);
+        }
+        
+        Box(const Box& b){
+            length = new int(*b.length);
+        }
+};
+
+int main(){
+    Box b1(10);
+    Box b2 = b1;
+    
+    cout << *b1.length << endl;
+    cout << *b2.length << endl;
+    
+    *b1.length = 20;
+    
+    cout << *b1.length << endl;
+    cout << *b2.length << endl;
+    return 0;
+}
