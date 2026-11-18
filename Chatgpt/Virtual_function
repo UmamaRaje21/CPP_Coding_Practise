@@ -1,0 +1,52 @@
+/******************************************************************************
+Virtual Function
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+class Animal{
+    public:
+        Animal(){
+            cout << "Animal Class Constructor" << endl;
+        }
+        
+        virtual void sound (){
+            cout << "Animal make a sound" << endl;
+        }
+        virtual ~Animal(){
+            cout << "Animal Class Destructor" << endl;
+        }
+};
+
+class Dog: public Animal{
+    public:
+        Dog(){
+            cout << "Dog Class Constructor" << endl;
+        }
+    
+        void sound (){
+            cout << "Dog barks" << endl;
+        }
+        ~Dog(){
+            cout << "Dog Class Destructor" << endl;
+        }
+
+};
+
+int main()
+{
+    Animal *a = new Animal;
+    a->sound();
+    delete a;
+    
+    Dog *d = new Dog;
+    d->sound();
+    delete d;
+    
+    Animal *e = new Dog;
+    e->sound();
+    delete e;
+
+    return 0;
+}
