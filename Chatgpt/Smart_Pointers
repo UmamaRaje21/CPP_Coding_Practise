@@ -1,0 +1,50 @@
+/******************************************************************************
+Smart Pointers
+1. Unique Pointers
+2. Shared Pointers
+3. Weak Pointers
+
+*******************************************************************************/
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+int main()
+{
+    /* Unique Pointer */
+    auto p1 = make_unique<int>(10);
+    cout << *p1 << endl;
+    
+    /* Shared Pointer */
+    shared_ptr<int> s1 = make_shared<int>(100);
+    cout << "Count : " << s1.use_count() << endl;
+    cout << *s1 << endl;
+    
+    {
+        shared_ptr<int> s2 = s1;
+        cout << "Count : " << s1.use_count() << endl;
+        cout << *s2 << endl;
+    }
+    cout << "Count : " << s1.use_count() << endl;
+    cout << *s1 << endl;
+    
+    
+    /* Weak Pointer */
+    weak_ptr<int> w1;
+    {
+        shared_ptr<int> s2 = make_shared<int>(100);
+        w1 = s2;
+        if (auto temp = w1.lock()){
+            cout << "Pointer is alive " << *temp << endl;
+        }
+    }
+    
+    if (auto temp = w1.lock()){
+        cout << "Pointer is alive " << *temp << endl;
+    }else{
+        cout <<"Pointer is out of scope " << endl;
+    }
+    
+    return 0;
+}
